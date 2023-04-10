@@ -7,3 +7,13 @@ export async function user() {
     console.error(error);
   }
 }
+
+export async function students() {
+  try {
+    const response = await fetch("http://localhost:3001/students");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}

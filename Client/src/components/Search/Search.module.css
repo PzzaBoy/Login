@@ -1,0 +1,33 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.info {
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  gap: 80px
+}
+
+.info p {
+  text-align: center;
+  width: 200px;
+}
+
+.student {
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  gap: 80px
+}
+
+.student p {
+  text-align: center;
+  width: 200px;
+}

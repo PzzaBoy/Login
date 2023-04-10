@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Search } from "./components/Search";
-import { Login } from './components/Login'
+import { Search } from "./components/Search/Search";
+import { Login } from './components/Login/Login'
+import { useContext } from "react";
+import "./App.css";
 
 
 function App() {

@@ -48,6 +48,33 @@ app.get("/users", (req, res) => {
   });
 });
 
+app.get("/students", (req, res) => {
+  const pool = new sql.ConnectionPool(config);
+
+  pool.connect((err) => {
+    if (err) {
+      console.error("Error de conexión:", err.message);
+      return;
+    }
+
+    const request = pool.request();
+
+    request.query("SELECT * FROM Alumnos", (err, result) => {
+      if (err) {
+        console.error("Error de consulta:", err);
+        return;
+      }
+      console.log(result.recordset);
+
+      // Cierra la conexión después de obtener los resultados
+      pool.close();
+
+      // Envía los resultados como respuesta
+      res.send(result.recordset);
+    });
+  });
+});
+
 app.listen(3001, () => {
   console.log("Servidor iniciado en el puerto 3000");
 });
