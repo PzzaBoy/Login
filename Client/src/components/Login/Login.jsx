@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { validatorUser } from "../Hooks/useIsUser"
+import { validatorUser } from "../../Hooks/useIsUser"
 import { Link } from "react-router-dom"
+import styles from "./Login.module.css"
 
 export const Login = () => {
 
@@ -18,8 +19,8 @@ export const Login = () => {
   }
 
   return (
-    <div>
-      <form action="submit">
+    <div className={styles.container}>
+      <form action="submit" className={styles.forms}>
         <label> Username </label>
         <input onChange={handleUsername} type="text" />
         <label> Password </label>

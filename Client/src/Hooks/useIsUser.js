@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { user } from "../utils/get";
 
 const data = await user();
