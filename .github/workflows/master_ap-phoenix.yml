@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'AP-PHOENIX'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_83B94F9D60734BD5A6C60B6A8589DF6D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A30BB7301BEA42F1822A82641A3E6B2B }}
           package: .
